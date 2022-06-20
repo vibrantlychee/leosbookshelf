@@ -1,0 +1,16 @@
+body {
+    font-family: monospace;
+}
+
+div.header {
+    line-height: 0em;
+}
+
+div.featured {
+    text-align: center;
+    line-height: 0em;
+}
+
+img.featured {
+    width: 47%;
+}
