@@ -107,6 +107,9 @@ def write_file(blocks):
     except:
         pass
     filepath = filepath + "/"
+
+    urllib.request.urlretrieve(favicon_url, filepath + "favicon.jpg")
+    favicon_url = "favicon.jpg"
     
     # write the html file
     with open(filepath + "post.html", 'w') as f:
