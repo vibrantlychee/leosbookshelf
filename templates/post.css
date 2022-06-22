@@ -26,44 +26,51 @@ div.text {
     margin-right: auto;
 }
 
-#pic1 {
+figcaption {
+    color: grey;
+    text-align: center;
+}
+
+img.pic1 {
     width: 100%;
     display: block;
-    padding: 0 0% 2% 0%;
+    padding: 0 0% 0% 0%;
     margin-left: auto;
     margin-right: auto;
 }
-#pic2 {
-    width: 33%;
+
+img.pic2 {
+    width: 45%;
     float: left;
     padding: 0.5% 2% 0.5% 0%;
 }
-#pic3 {
-    width: 33%;
+
+img.pic3 {
+    width: 45%;
     float: right;
     padding: 0.5% 0% 0.5% 2%;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1000px) {
     body {
         padding: 0 10%;
     }
     div.text {
-        width: 75%;
+        width: 100%;
     }
-    #pic1 {
+    img.pic1 {
         width: 100%;
         display: block;
         padding: 0 0 2% 0;
         margin-left: auto;
         margin-right: auto;
     }
-    #pic2 {
+    img.pic2 {
         width: 50%;
         float: left;
         padding: 0.5% 2% 0.5% 0%;
     }
-    #pic3 {
+    img.pic3 {
         width: 50%;
         float: right;
         padding: 0.5% 0% 0.5% 2%;
@@ -71,25 +78,14 @@ div.text {
 }
 
 @media (max-width: 640px) {
-    div.text {
+    img.pic2 {
         width: 100%;
-    }
-
-    #pic1 {
-        width: 100%;
-        display: block;
-        padding: 0 0% 2% 0%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #pic2 {
-        width: 50%;
         float: left;
-        padding: 0.5% 2% 0.5% 0%;
+        padding: 2% 0%;
     }
-    #pic3 {
-        width: 50%;
+    img.pic3 {
+        width: 100%;
         float: right;
-        padding: 0.5% 0% 0.5% 2%;
+        padding: 2% 0%;
     }
 }
