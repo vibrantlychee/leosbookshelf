@@ -5,8 +5,9 @@ https://leosbookshelf.page/
 
 # automator
 A bare bones content management system (CMS) I made to automate the publishing 
-of content. It is a simple python script that uses the Notion API endpoints to 
-grab all data of a written post such as the body text, poster image, inline 
+of content. It is a simple python script that uses the 
+[Notion API](https://developers.notion.com/reference/intro) endpoints to grab 
+all data of a written post such as the body text, poster image, inline 
 images, etc., then writes them into the appropriate HTML, CSS, and image files 
 to be inserted into this repo. It also automatically updates `index.html`.
 
