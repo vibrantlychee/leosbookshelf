@@ -20,7 +20,8 @@ def text_block_as_html(block: TextBlock):
     Returns:
         str: the HTML output. 
     """
-    out = [block.bold, block.italics, block.underline, block.content, block.underline, block.italics, block.bold]
+    out = [block.bold, block.italics, block.underline, block.content, 
+            block.underline, block.italics, block.bold]
 
     i = 0
     while i < 3:
@@ -64,7 +65,8 @@ def write_image_block(img: ImageBlock, img_counter: int, filepath: str):
     Returns:
         None
     """
-    urllib.request.urlretrieve(img.url, filepath + "pic{}.jpg".format(img_counter))
+    urllib.request.urlretrieve(img.url, 
+                                filepath + "pic{}.jpg".format(img_counter))
     
     with open(filepath + "post.html", 'a') as f:
         # write image element
@@ -204,7 +206,8 @@ def write_file(blocks):
     </div>
 
     <div class="text">
-        """.format(page_title.lower(), favicon_url, page_title.lower(), publish_date, quote))
+        """.format(page_title.lower(), favicon_url, page_title.lower(), 
+                    publish_date, quote))
     
     img_counter = 1
     for block in main_body_blocks:        
