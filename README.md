@@ -1,5 +1,7 @@
 # leosbookshelf
-My personal website.
+My personal website. Still writing! ✍🏻
+
+https://leosbookshelf.page/
 
 # automator
 A bare bones content management system (CMS) I made to automate the publishing of content. The high level process:
