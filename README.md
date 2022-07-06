@@ -9,7 +9,9 @@ of content. It is a simple python script that uses the
 [Notion API](https://developers.notion.com/reference/intro) endpoints to grab 
 all data of a written post such as the body text, poster image, inline 
 images, etc., then writes them into the appropriate HTML, CSS, and image files 
-to be inserted into this repo. It also automatically updates `index.html`.
+based on the template files (`post.html`, `post.css`) in the `templates` 
+directory. These files are then inserted into this repo, and the homepage 
+`index.html` is also updated automatically. 
 
 The high level process:
 1. I write my post on Notion.
@@ -26,5 +28,5 @@ run:
 this repo. 
 5. `add`, `commit`, and `push` changes. 
 6. Wait for changes to propagate. 
-7. Check https://leosbookshelf.page/ for changes.
-
+7. Check https://leosbookshelf.page/ for updates (may take a while for changes 
+ to propagate). 
