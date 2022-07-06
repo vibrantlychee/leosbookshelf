@@ -33,11 +33,11 @@ the local repo.
 ## Documentation
 In progress.
 
-- [ ] `Block.py`
-- [ ] `caller.py`
-- [ ] `parsers.py`
-- [ ] `run.py`
-- [x] `writer.py`
+- [ ] `automator/Block.py`
+- [ ] `automator/caller.py`
+- [ ] `automator/parsers.py`
+- [ ] `automator/run.py`
+- [x] `automator/writer.py`
 
 ## (Lack of) Error Handling
 Because this is intended for personal use, I have not implemented any error 
