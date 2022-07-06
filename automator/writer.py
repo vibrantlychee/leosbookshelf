@@ -1,9 +1,25 @@
+"""
+Given instances of classes found in Block, writes them into appropriate HTML and 
+CSS. 
+"""
+
 from Block import *
 from datetime import datetime
 import os
 import urllib.request
 
 def text_block_as_html(block: TextBlock):    
+    """
+    Given a TextBlock instance, returns a string containing the HTML code needed
+    to present the contents of the TextBlock instance, including any underline,
+    italics, bold, and hyperlink tags if necessary.
+
+    Args:
+        block (TextBlock): an instance of TextBlock.
+
+    Returns:
+        str: the HTML output. 
+    """
     out = [block.bold, block.italics, block.underline, block.content, block.underline, block.italics, block.bold]
 
     i = 0
@@ -34,6 +50,20 @@ def text_block_as_html(block: TextBlock):
 
 
 def write_image_block(img: ImageBlock, img_counter: int, filepath: str):
+    """
+    Writes the HTML code needed to present the contents of an ImageBlock 
+    instance into the given filepath. 
+
+    Args:
+        img (ImageBlock): an instance of ImageBlock.
+        img_counter (int): a counter used to identify this image tag.
+            The class of this image is always of the form 'pic{}', with 
+            the value of img_counter inside the braces.
+        filepath (str): the path of the file in which HTML will be written.
+
+    Returns:
+        None
+    """
     urllib.request.urlretrieve(img.url, filepath + "pic{}.jpg".format(img_counter))
     
     with open(filepath + "post.html", 'a') as f:
@@ -50,6 +80,18 @@ def write_image_block(img: ImageBlock, img_counter: int, filepath: str):
         """.format(img_counter, caption_str))
 
 def write_paragraph_block(paragraph: ParagraphBlock, filepath: str):
+    """
+    Writes the HTML code needed to present the contents of a ParagraphBlock
+    instance into the given filepath. 
+
+    Args:
+        paragraph (ParagraphBlock): an instance of ParagraphBlock.
+        filepath (str): the path of the file in which HTML will be written.
+
+    Returns:
+        None
+    """
+    
     with open(filepath + "post.html", 'a') as f:
         paragraph_str = ""
         for block in paragraph.children:
@@ -61,12 +103,35 @@ def write_paragraph_block(paragraph: ParagraphBlock, filepath: str):
         """.format(paragraph_str))
 
 def str_to_filepath(string):
+    """
+    Converts a given string into a filepath by replacing spaces ' ' with 
+    dashes '-' and turning all letters into lower case. 
+
+    Args:
+        string (str): a string representing the title of the post
+
+    Returns:
+        (str): the input string in all lower case and spaces replaced with '-'
+    """
+
     out = string.lower().split(' ')
     return "-".join(out)
 
 def write_file(blocks):
-    # return 0 for success
-    # return 1 for error
+    """
+    Takes all objects inside the input list and uses them to write files 
+    titled 'post.html' and 'post.css', and also updates 'index.html' 
+    accordingly. The 'post.*' files will be stored in a directory using the 
+    given title found in the input list, in the format specified in 
+    str_to_filepath(). 
+
+    Args:
+        blocks (list): a list of instances of classes found in Block.py
+
+    Returns:
+        (int): whether or not the write was successful. 
+            0 for success and 1 for failure. 
+    """
 
     # page properties
     page_title = ""

@@ -25,8 +25,20 @@ run:
 1. `python automator/run.py`
 2. Enter Notion authentication token and public URL to Notion page as prompted.
 3. Wait for success message. If successful, new files will have been written to 
-this repo. 
+the local repo. 
 5. `add`, `commit`, and `push` changes. 
-6. Wait for changes to propagate. 
 7. Check https://leosbookshelf.page/ for updates (may take a while for changes 
  to propagate). 
+
+## Documentation
+In progress.
+
+- [ ] `Block.py`
+- [ ] `caller.py`
+- [ ] `parsers.py`
+- [ ] `run.py`
+- [x] `writer.py`
+
+## (Lack of) Error Handling
+Because this is intended for personal use, I have not implemented any error 
+handling. All my Notion pages follow the same page structure. 
